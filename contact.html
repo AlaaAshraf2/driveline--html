@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLine | تواصل معنا</title>
+    <link rel="icon" href="./Logo3 design for a ca.png" type="image/png">
+    <!-- Icons and Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <a href="#" class="logo"><img src="./Logo3 design for a ca.png" alt="DriveLine Logo"></a>
+            <ul class="navbar">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="المساعدة.html" class="nav-link">Service</a></li>
+                <li><a href="contact.html" class="nav-link"> call us</a></li>
+                <li><a href="#" class="nav-link"> About</a></li>
+            </ul>
+        </div>
+
+        <div class="search-bar">
+            <form class="search-form" action="/search" method="get">
+                <input type="search" name="query" placeholder="search..." class="search-input" dir="rtl">
+            </form>
+        </div>
+
+        <div class="header-right">
+            <!-- أزرار تسجيل الدخول/الاشتراك -->
+            <div class="header-btn">
+                <a href="./signup.html" class="sign-up">sign-up</a>
+                <a href="./login.html" class="sign-in"> sign-in</a>
+            </div>
+            
+            <!-- أيقونات التواصل الاجتماعي -->
+            <div class="social-icons-desktop">
+                <a href="#" class="social-icon facebook" title="فيسبوك">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="#" class="social-icon instagram" title="إنستغرام">
+                    <i class="fab fa-instagram-square"></i>
+                </a>
+            </div>
+
+            <!-- أيقونة فتح القائمة الجانبية (مرئية دائمًا) -->
+            <!-- Label مرتبط بالـ Checkbox #sidebar-toggle -->
+            <label for="sidebar-toggle" class="menu-icon-label" title="فتح/إغلاق القائمة">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية (Sidebar) - ✅ تم نقلها لتصبح شقيقة للـ Checkbox -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <p class="sidebar-title"> Welcome!</p>
+            <a href="./login.html" class="sidebar-login-link">
+                <i class="fas fa-sign-in-alt login-icon"></i>  sign-in
+            </a>
+            <!-- زر لإغلاق القائمة الجانبية -->
+            <label for="sidebar-toggle" class="sidebar-close-btn" title="close">
+                <i class="fas fa-times"></i>
+            </label>
+        </div>
+        <div class="sidebar-menu">
+            <a href="./pages/mercedes.html">Mercedes</a>
+            <a href="./pages/bmw.html">BMW</a>
+            <a href="./pages/toyota.html">Toyota</a>
+            <a href="./pages/kia.html">KIA</a>
+            <a href="./pages/audi.html">Audi</a>
+            <a href="./pages/skoda.html">Skoda</a>
+            <a href="lamborghini.html">Lamborghini</a>
+            <a href="./pages/mitsubishi lancer.html">Mitsubishi Lancer</a>
+            <a href="./pages/ferrari.html">Ferrari</a>
+            <a href="./pages/volkswagen.html">volkswagen</a>
+        </div>
+    </aside>
+
+    <!-- طبقة التغطية عند فتح القائمة الجانبية - ✅ تم نقلها لتصبح شقيقة للـ Checkbox -->
+    <label for="sidebar-toggle" class="overlay"></label>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="auth-container">
+            <h1 class="auth-title">تواصل معنا</h1>
+            <p style="color: #777; margin-bottom: 25px; line-height: 1.6;">
+                لأي استفسارات أو ملاحظات، يرجى ملء النموذج أدناه وسنعاود الاتصال بك في أقرب وقت.
+            </p>
+            
+            <form action="#" method="post">
+                <div class="input-group">
+                    <label for="name">الاسم</label>
+                    <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">الرسالة</label>
+                    <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>حول DriveLine</h3>
+                <p>وجهتك الأولى لتأجير وبيع السيارات الفخمة بأفضل الأسعار وأسهل الإجراءات.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="driveline-1.html">الرئيسية</a></li>
+                    <li><a href="help.html">خدماتنا</a></li>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">الخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>اتصل بنا</h3>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> info@driveline.com</p>
+                <div class="social-icons-footer">
+                    <a href="face/face.html" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="insta/insta.html" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 DriveLine. جميع الحقوق محفوظة.
+        </div>
+    </footer>
+
+</body>
+</html>

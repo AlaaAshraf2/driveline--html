@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+       
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: row;
+            background-color: #ffffff;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .product-image-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .product-image-section img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 20px;
+            object-fit: contain;
+            height: 500px;
+            width: 500px;
+        }
+
+        .product-details-section {
+            flex: 1;
+            padding: 30px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .product-details-section .category {
+            font-size: 14px;
+            color: #777;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .product-details-section .product-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .product-details-section .product-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #214974;
+            margin-bottom: 20px;
+        }
+
+        .product-details-section .product-description {
+            font-size: 18px;
+            height: 300px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom:20px outo;
+            padding: 15px;
+            width: 100;
+            border: 2px solid #ccc;
+            overflow-y: scroll;
+            box-sizing: border-box;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(230, 117, 52, 0.598);
+
+        }
+        .product-details-section .product-description::-webkit-scrollbar{
+            width: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-track{
+            background:#f1f1f1;
+            border-radius: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-thumb{
+            background-color: #fe5b3d;
+            border-radius: 10p;
+            border: 2px solid #f1f1f1;
+
+        }
+        .actions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            padding: 5px;
+            width: fit-content;
+        }
+
+        .quantity-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 5px 10px;
+            color: #555;
+            transition: color 0.2s;
+        }
+
+        .quantity-button:hover {
+            color: #214974;
+        }
+
+        .quantity-display {
+            font-size: 18px;
+            padding: 0 10px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .buy-button,
+        .favorite-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #fe5b3d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: large;
+            font-family: 'Cairo', sans-serif;
+text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
+        .favorite-button {
+            background-color: #ffffff;
+            color: #fe5b3d;
+
+border: 2px solid #ff4757;
+            padding: 13px 28px;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        .favorite-button:hover {
+            background-color:#0b5ed7;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .buttons-group {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .buttons-group .buy-button,
+        .buttons-group .favorite-button {
+            flex: 1;
+        }
+        html,body{
+            width: 100;
+            height: 100;
+            margin: 0;
+            padding: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="main">
+        <div class="product-container">
+            <div class="product-image-section">
+                <img src="../4mer.jpg" alt="صورة المنتج">
+            </div>
+            <div class="product-details-section">
+                <div class="category"></div>
+                <h1 class="product-title">  مرسيدس-بنز Concept EQG، </h1>
+                <div class="product-price"> 180,000 دولار</div>
+                <p class="product-description">
+المفهوم والتصميم (Concept EQG) <br>
+• الأساس: تحافظ على الهيكل الصندوقي والملامح المميزة لسيارة G-Class التقليدية، مثل المصابيح الدائرية ومفصلات الأبواب المكشوفة. <br>
+• عناصر EQ: دُمجت بها عناصر تصميم خاصة بعائلة مرسيدس EQ الكهربائية، مثل الشبك الأمامي المغلق مع نجمة مرسيدس المضيئة والمحاطة بنمط "المربعات الدائرية" المضيئة. <br>
+• الخلفية: استُبدل غطاء الإطار الاحتياطي التقليدي بـ صندوق قابل للقفل (يُسمى "Design Box" أو "صندوق التصميم") مضاء في النسخة المبدئية، ويمكن استخدامه لتخزين كابل الشحن أو الأدوات. <br>
+• الإضاءة: تتميز بوجود خطوط إضاءة LED خارجية تضفي طابعًا عصريًا وكهربائيًا، مثل الشريط الأبيض أعلى رف السقف الأمامي والشريط الأحمر في الخلف. <br>
+الأداء والقدرات (النسخة الإنتاجية: G 580 with EQ Technology) <br>
+حافظت مرسيدس على قدرات الفئة-G الأسطورية للطرق الوعرة حتى في النسخة الكهربائية: <br>
+• نظام الدفع: تعتمد على أربعة محركات كهربائية، كل محرك يدفع عجلة بشكل منفصل (Four-Motor, Four-Wheel Drive). هذا يمنحها قدرة فريدة على التحكم في عزم دوران كل عجلة بشكل مستقل. <br>
+• القوة والعزم: يبلغ إجمالي القوة 579 حصانًا (hp) والعزم 859 رطل-قدم (1164 نيوتن متر)، مما يوفر تسارعًا قويًا على الطريق. <br>
+• الشاسيه: لا تزال مبنية على هيكل السلم القوي (Ladder Frame) المُميِّز لسيارات الطرق الوعرة، مع نظام تعليق أمامي مستقل ومحور صلب مُعاد تطويره في الخلف لاستيعاب نظام الدفع الكهربائي. <br>
+• التعشيق: على غرار سيارات الدفع الرباعي التقليدية، تحتوي على علبة تروس من سرعتين، مما يوفر نطاقًا منخفضًا (Low Range Reduction Gear) لتعزيز قدراتها في التغلب على أصعب التحديات على الطرق الوعرة. <br>
+• قدرات الطرق الوعرة: تتضمن قفل تفاضلي افتراضي، وتوجيه عزم الدوران (Torque Vectoring)، ووظيفة "الزحف على الطرق الوعرة" (Off-Road Crawl Function)، ونظام "G-Turn" الذي يسمح للسيارة بالدوران حول محورها بزاوية 360 درجة في المكان (مثل الدبابة). <br>
+البطارية والنطاق <br>
+• البطارية: تستخدم حزمة بطارية ليثيوم أيون بسعة تقريبية تبلغ 116 كيلووات في الساعة (kWh). <br>
+• النطاق (مدى القيادة): النطاق المُقدر لها حسب وكالة حماية البيئة الأمريكية (EPA) هو حوالي 239 ميل (حوالي 385 كيلومترًا) في ظروف القيادة المختلطة. <br>
+• الشحن: تدعم الشحن السريع بالتيار المستمر (DC Fast-Charge) بمعدل يصل إلى 200 كيلووات (kW). <br>
+
+</p>
+
+                <div class="actions-container">
+                    <label for="quantity">الكمية:</label>
+                    <div class="quantity-selector">
+                        <input type="number" id="quantity" min="1" max="10" value="1" style="border: none;">
+                    </div>
+                    <div class="buttons-group">
+                        <a href="../signup.html" class="buy-button">Booking</a>
+                        <button class="favorite-button">Favorite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

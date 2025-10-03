@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLine | أفضل عروض السيارات</title>
+    <link rel="icon" href="./Logo3 design for a ca.png" type="image/png">
+    <!-- تضمين الخطوط والأيقونات الأساسية -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <!-- ربط ملف التنسيق المخصص (CSS فقط) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 1. Checkbox للتحكم في القائمة الجانبية (مخفي دائمًا) -->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+
+    <!-- ✅ Header/Navbar -->
+    <header>
+        <div class="header-left">
+            <a href="#" class="logo"><img src="./Logo3 design for a ca.png" alt="DriveLine Logo"></a>
+            <ul class="navbar">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="المساعدة.html" class="nav-link">Service</a></li>
+                <li><a href="contact.html" class="nav-link"> call us</a></li>
+                <li><a href="#" class="nav-link"> About</a></li>
+            </ul>
+        </div>
+
+        <div class="search-bar">
+            <form class="search-form" action="/search" method="get">
+                <input type="search" name="query" placeholder="search..." class="search-input" dir="rtl">
+            </form>
+        </div>
+
+        <div class="header-right">
+            <!-- أزرار تسجيل الدخول/الاشتراك -->
+            <div class="header-btn">
+                <a href="./signup.html" class="sign-up">sign-up</a>
+                <a href="./login.html" class="sign-in"> sign-in</a>
+            </div>
+            
+            <!-- أيقونات التواصل الاجتماعي -->
+            <div class="social-icons-desktop">
+                <a href="file:///D:/%D8%A2%D9%84%D8%A7%D8%A1%20%D8%A3%D8%B4%D8%B1%D9%81/DriveLine/face/face.html" class="social-icon facebook" title="فيسبوك">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="file:///D:/%D8%A2%D9%84%D8%A7%D8%A1%20%D8%A3%D8%B4%D8%B1%D9%81/DriveLine/insta/insta.html" class="social-icon instagram" title="إنستغرام">
+                    <i class="fab fa-instagram-square"></i>
+                </a>
+            </div>
+
+            <!-- أيقونة فتح القائمة الجانبية (مرئية دائمًا) -->
+            <!-- Label مرتبط بالـ Checkbox #sidebar-toggle -->
+            <label for="sidebar-toggle" class="menu-icon-label" title="فتح/إغلاق القائمة">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية (Sidebar) - ✅ تم نقلها لتصبح شقيقة للـ Checkbox -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <p class="sidebar-title"> Welcome!</p>
+            <a href="./login.html" class="sidebar-login-link">
+                <i class="fas fa-sign-in-alt login-icon"></i>  sign-in
+            </a>
+            <!-- زر لإغلاق القائمة الجانبية -->
+            <label for="sidebar-toggle" class="sidebar-close-btn" title="close">
+                <i class="fas fa-times"></i>
+            </label>
+        </div>
+        <div class="sidebar-menu">
+            <a href="./pages/mercedes.html">Mercedes</a>
+            <a href="./pages/bmw.html">BMW</a>
+            <a href="./pages/toyota.html">Toyota</a>
+            <a href="./pages/kia.html">KIA</a>
+            <a href="./pages/audi.html">Audi</a>
+            <a href="./pages/skoda.html">Skoda</a>
+            <a href="lamborghini.html">Lamborghini</a>
+            <a href="./pages/mitsubishi lancer.html">Mitsubishi Lancer</a>
+            <a href="./pages/ferrari.html">Ferrari</a>
+            <a href="./pages/volkswagen.html">volkswagen</a>
+        </div>
+    </aside>
+
+    <!-- طبقة التغطية عند فتح القائمة الجانبية - ✅ تم نقلها لتصبح شقيقة للـ Checkbox -->
+    <label for="sidebar-toggle" class="overlay"></label>
+
+    <main>
+        <!-- قسم السلايدر -->
+        <section class="carousel">
+            <div class="slides-container">
+                <!-- الشريحة 1 -->
+                <div class="slide">
+                    <div class="content-overlay">
+                        <h2>اكتشف عروضنا الجديدة</h2>
+                       
+                    </div>
+                </div>
+                <!-- الشريحة 2 -->
+                <div class="slide">
+                    <div class="content-overlay">
+                        <h2>أناقة وفخامة</h2>
+                        
+                    </div>
+                </div>
+                <!-- الشريحة 3 -->
+                <div class="slide">
+                    <div class="content-overlay">
+                        <h2>تصميم عصري</h2>
+                        
+                    </div>
+                </div>
+                <!-- الشريحة 4 -->
+                <div class="slide">
+                    <div class="content-overlay">
+                        <h2>جودة لا تضاهى</h2>
+                       
+                    </div>
+                </div>
+                <!-- الشريحة 5 -->
+                <div class="slide">
+                    <div class="content-overlay">
+                        <h2>راحة فائقة</h2>
+                        
+                    </div>
+                </div>
+                <!-- الشريحة 6 -->
+                <div class="slide">
+                    <div class="content-overlay">
+                        <h2>خصومات الصيف</h2>
+                       
+                    </div>
+                </div>
+                <!-- الشريحة 7 -->
+                <div class="slide">
+                    <div class="content-overlay">
+                        <h2>خيارات متعددة</h2>
+                       
+                    </div>
+                </div>
+                <!-- الشريحة 8 -->
+                <div class="slide">
+                    <div class="content-overlay">
+                        <h2>سهولة الحجز</h2>
+                        
+                    </div>
+                </div>
+                <!-- الشريحة 9 -->
+                <div class="slide">
+                    <div class="content-overlay">
+                        <h2>خدمة ممتازة</h2>
+                        
+                    </div>
+                </div>
+                <!-- الشريحة 10 -->
+                <div class="slide">
+                    <div class="content-overlay">
+                        <h2>انطلق الآن!</h2>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المنتجات -->
+        <section class="products" id="products">
+            <h2 class="section-title">  New cars available</h2>
+            <div class="product-grid">
+
+                <!-- بطاقة المنتج 1 -->
+                <div class="product-card">
+  <div class="card-inner">
+    <div class="card-front">
+      <div class="img-container">
+        <img src="./7mer.jpg" alt="2017 Honda Civic White" class="product-img">
+      </div>
+    </div>
+    <div class="card-back">
+      <div class="product-details">
+        <span class="year">2023</span>
+        <h3 class="car-model">Mercedes-AMG G 63</h3>
+        <p class="price">$183,000 | $600 /month | </p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <a href="./products/product5.html" class="booking-btn">booking now </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                <!-- بطاقة المنتج 2 -->
+                <div class="product-card">
+                    <div class="img-container">
+                        <img src="./b10.jpg" alt="2017 Honda Civic Red" class="product-img">
+                    </div>
+                    <div class="product-details">
+                        <span class="year">2023</span>
+                        <h3 class="car-model">(BMW S-Class Sedan)</h3>
+                        <p class="price">$58500 | $358 /شهر</p>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star-half"></i> <i class="bx bx-star"></i>
+                        </div>
+                        <a href="./products/bm10.html" class="booking-btn">booking now </a>
+                    </div>
+                </div>
+
+                <!-- بطاقة المنتج 3 -->
+                <div class="product-card">
+                    <div class="img-container">
+                        <img src="./t9.jpg" alt="2017 Honda Civic Black"
+                            class="product-img">
+                    </div>
+                    <div class="product-details">
+                        <span class="year">2023</span>
+                        <h3 class="car-model">(Toyota Corolla)</h3>
+                        <p class="price">$26,700 | $958 /month </p>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                        </div>
+                        <a href="./products/t3.html" class="booking-btn">booking now </a>
+                    </div>
+                </div>
+                
+                <!-- إضافة بطاقة رابعة للملء -->
+                <div class="product-card">
+                    <div class="img-container">
+                        <img src="10vol.jpg" alt="New Model Placeholder" class="product-img">
+                    </div>
+                    <div class="product-details">
+                        <span class="year">2023</span>
+                        <h3 class="car-model">Volkswagen Golf GTI Clubsport (الجيل السابع Mk7 أو Mk7.5).3</h3>
+                        <p class="price">$35,000 | $200 /month</p>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star-half"></i>
+                        </div>
+                        <a href="./products/volc10.html" class="booking-btn">booking now </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <!-- ✅ Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>حول DriveLine</h3>
+                <p>وجهتك الأولى لتأجير وبيع السيارات الفخمة بأفضل الأسعار وأسهل الإجراءات.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">خدماتنا</a></li>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">الخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>اتصل بنا</h3>
+                <p><i class="fas fa-phone mr-2"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope mr-2"></i> info@driveline.com</p>
+                <div class="social-icons-footer">
+                    <a href="face/face.html" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="insta/insta.html" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 DriveLine. جميع الحقوق محفوظة.
+        </div>
+    </footer>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLine | سيارات تويوتا</title>
+    <!-- تضمين أيقونات Boxicons (أيقونات واجهة المستخدم) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- تضمين Font Awesome (للأيقونات الاجتماعية وأيقونة القائمة) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- ربط ملف التنسيق المشترك -->
+    <link rel="stylesheet" href="../style.css"> 
+</head>
+
+<body>
+    <!-- زر التحكم بالقائمة الجانبية (مخفي، يتم التحكم به بالـ CSS) -->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+
+    <!-- شريط التنقل (Header) -->
+    <header>
+        <div class="header-left">
+            <a href="driveline.html" class="logo"><img src="../Logo3 design for a ca.png" alt="DriveLine Logo"></a>
+            <ul class="navbar">
+                <li><a href="../driveline.html" class="nav-link active">Home</a></li>
+                <li><a href="المساعدة.html" class="nav-link">Service</a></li>
+                <li><a href="contact.html" class="nav-link"> call us</a></li>
+                <li><a href="#" class="nav-link"> About</a></li>
+            </ul>
+        </div>
+
+        <div class="search-bar">
+            <form class="search-form" action="/search" method="get">
+                <input type="search" name="query" placeholder="ابحث عن المنتجات..." class="search-input" dir="rtl">
+            </form>
+        </div>
+
+        <div class="header-right">
+            <!-- أزرار تسجيل الدخول/الاشتراك -->
+            <div class="header-btn">
+                <a href="./signup.html" class="sign-up">اشتراك</a>
+                <a href="./login.html" class="sign-in">تسجيل الدخول</a>
+            </div>
+            
+            <!-- أيقونات التواصل الاجتماعي -->
+            <div class="social-icons-desktop">
+                <a href="../face/face.html" class="social-icon facebook" title="فيسبوك">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="../insta/insta.html" class="social-icon instagram" title="إنستغرام">
+                    <i class="fab fa-instagram-square"></i>
+                </a>
+            </div>
+
+            <!-- أيقونة فتح القائمة الجانبية (مرئية دائمًا) -->
+            <!-- Label مرتبط بالـ Checkbox #sidebar-toggle -->
+            <label for="sidebar-toggle" class="menu-icon-label" title="فتح/إغلاق القائمة">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية (Sidebar) - ✅ تم نقلها لتصبح شقيقة للـ Checkbox -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <p class="sidebar-title"> Welcome!</p>
+            <a href="./login.html" class="sidebar-login-link">
+                <i class="fas fa-sign-in-alt login-icon"></i>  sign-in
+            </a>
+            <!-- زر لإغلاق القائمة الجانبية -->
+            <label for="sidebar-toggle" class="sidebar-close-btn" title="close">
+                <i class="fas fa-times"></i>
+            </label>
+        </div>
+        <div class="sidebar-menu">
+            <a href="mercedes.html">Mercedes</a>
+            <a href="bmw.html">BMW</a>
+            <a href="toyota.html">Toyota</a>
+            <a href="kia.html">KIA</a>
+            <a href="audi.html">Audi</a>
+            <a href="skoda.html">Skoda</a>
+            <a href="lamborghini.html">Lamborghini</a>
+            <a href="mitsubishi lancer.html">Mitsubishi Lancer</a>
+            <a href="ferrari.html">Ferrari</a>
+            <a href="volkswagen.html">volkswagen</a>
+        </div>
+    </aside>
+
+    <!-- طبقة التغطية عند فتح القائمة الجانبية - ✅ تم نقلها لتصبح شقيقة للـ Checkbox -->
+    <label for="sidebar-toggle" class="overlay"></label>
+
+    <center>
+        <section class="products" id="products">
+    <h2>New cars available</h2>
+    <div class="product-grid">
+        
+        <div class="product-card">
+            <div class="img-container">
+                <img src="../t7.jpg" alt="2017 Honda Civic White" class="product-img">
+            </div>
+            <div class="product-details">
+                <span class="year">2022</span>
+                <h3 class="car-model">(Toyota Tundra)</h3>
+                <p class="price">74,000$ | $1000 /month</p>
+                     <div class="rating">
+                    
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i> 
+                    <a href="../products/toyota1.html" class="booking-btn">Booking Now</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="img-container">
+                <img src="../t8.jpg" alt="g-class ev" class="product-img">
+            </div>
+            <div class="product-details">
+                <span class="year">2019</span>
+                <h3 class="car-model">(Toyota Avalon)</h3>
+                <p class="price">$36,000 | $1000 /month</p>
+                
+                 <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <a href="../products/toyota2.html" class="booking-btn">Booking Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="img-container">
+                <img src="../t9.jpg" alt="2017 Honda Civic Black" class="product-img">
+            </div>
+            <div class="product-details">
+                <span class="year">2023</span>
+                <h3 class="car-model">(Toyota Corolla)</h3>
+                <p class="price">$26,700 | $958 /month</p>
+               
+                 <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <a href="../products/t3.html" class="booking-btn">Booking Now</a>
+                </div> 
+            </div>
+        </div>
+  <div class="product-card">
+            <div class="img-container">
+                <img src="../t10.jpg" alt="2017 Honda Civic Black" class="product-img">
+            </div>
+            <div class="product-details">
+                <span class="year">2017</span>
+                <h3 class="car-model">(Toyota 4Runner)</h3>
+                <p class="price">$41,000 | $358 /month</p>
+                
+                 <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <a href="../products/t4.html" class="booking-btn">Booking Now</a>
+                </div>
+            </div>
+        </div>
+<div class="product-card">
+            <div class="img-container">
+                <img src="../t1.jpg" alt="2017 Honda Civic Black" class="product-img">
+            </div>
+            <div class="product-details">
+                <span class="year">2020</span>
+                <h3 class="car-model">(Toyota RAV4)</h3>
+                <p class="price">$28,000 | $858 /month</p>
+                
+                 <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <a href="../products/t5.html" class="booking-btn">Booking Now</a>
+                </div>
+            </div>
+        </div>
+<div class="product-card">
+            <div class="img-container">
+                <img src="../t2.jpg" alt="2017 Honda Civic Black" class="product-img">
+            </div>
+            <div class="product-details">
+                <span class="year">2023</span>
+                <h3 class="car-model">(Toyota Camry).</h3>
+                <p class="price">$38,000 | $358 /month</p>
+                
+                 <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <a href="../products/t6.html" class="booking-btn">Booking Now</a>
+                </div>
+            </div>
+        </div>
+<div class="product-card">
+            <div class="img-container">
+                <img src="../t3.jpg" alt="2017 Honda Civic Black" class="product-img">
+            </div>
+            <div class="product-details">
+                <span class="year">2017</span>
+                <h3 class="car-model">Toyota Corolla</h3>
+                <p class="price">$140,000 | $1400 /month</p>
+                
+                 <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <a href="../products/t7.html" class="booking-btn">Booking Now</a>
+                </div>
+            </div>
+        </div>
+<div class="product-card">
+            <div class="img-container">
+                <img src="../t4.jpg" alt="2017 Honda Civic Black" class="product-img">
+            </div>
+            <div class="product-details">
+                <span class="year">2017</span>
+                <h3 class="car-model">(Toyota Yaris GR Sport).</h3>
+                <p class="price">$25,000| $2258 /month</p>
+                
+                 <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <a href="../products/t8.html" class="booking-btn">Booking Now</a>
+                </div>
+            </div>
+        </div>
+<div class="product-card">
+            <div class="img-container">
+                <img src="../t5.jpg" alt="2017 Honda Civic Black" class="product-img">
+            </div>
+            <div class="product-details">
+                <span class="year">2017</span>
+                <h3 class="car-model">(Toyota Land Cruiser Prado)</h3>
+                <p class="price">$55,950 | $559 /month</p>
+                
+                 <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+<a href="../products/t9.html" class="booking-btn">Booking Now</a>
+                </div>
+            </div>
+        </div>
+<div class="product-card">
+            <div class="img-container">
+                <img src="../t6.jpg" alt="2017 Honda Civic Black" class="product-img">
+            </div>
+            <div class="product-details">
+                <span class="year">2024</span>
+                <h3 class="car-model">Toyota Tacoma</h3>
+                <p class="price">$65,000 | $6500 /month</p>
+                
+                 <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <a href="../products/t10.html" class="booking-btn">Booking Now</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+</section>   
+ </center>
+
+    <!-- التذييل (Footer) -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>حول DriveLine</h3>
+                <p>وجهتك الأولى لتأجير السيارات الفاخرة والعملية. نسعى لتقديم أفضل تجربة قيادة لعملائنا الكرام بأفضل الأسعار.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="../driveline.html">الرئيسية</a></li>
+                    <li><a href="#products">سياراتنا</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>تواصل معنا</h3>
+                <p><i class='bx bxs-map'></i> شارع الأمل، مبنى 5، القاهرة، مصر</p>
+                <p><i class='bx bxs-phone'></i> +20 123 456 7890</p>
+                <p><i class='bx bxs-envelope'></i> info@driveline.com</p>
+                <div class="social-icons-footer">
+                    <a href="face/face.html" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="insta/insta.html" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 DriveLine. جميع الحقوق محفوظة.
+        </div>
+    </footer>
+</body>
+
+</html>

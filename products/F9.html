@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+       
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: row;
+            background-color: #ffffff;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .product-image-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        .product-image-section img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .product-details-section {
+            flex: 1;
+            padding: 30px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-details-section .category {
+            font-size: 14px;
+            color: #777;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .product-details-section .product-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .product-details-section .product-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #214974;
+            margin-bottom: 20px;
+        }
+
+        .product-details-section .product-description {
+            font-size: 18px;
+            height: 300px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom:20px outo;
+            padding: 15px;
+            width: 100;
+            border: 2px solid #ccc;
+            overflow-y: scroll;
+            box-sizing: border-box;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(230, 117, 52, 0.598);
+
+        }
+        .product-details-section .product-description::-webkit-scrollbar{
+            width: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-track{
+            background:#f1f1f1;
+            border-radius: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-thumb{
+            background-color: #fe5b3d;
+            border-radius: 10p;
+            border: 2px solid #f1f1f1;
+
+        }
+        .actions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            padding: 5px;
+            width: fit-content;
+        }
+
+        .quantity-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 5px 10px;
+            color: #555;
+            transition: color 0.2s;
+        }
+
+        .quantity-button:hover {
+            color: #214974;
+        }
+
+        .quantity-display {
+            font-size: 18px;
+            padding: 0 10px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .buy-button,
+        .favorite-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #fe5b3d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: large;
+            font-family: 'Cairo', sans-serif;
+           text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
+        .favorite-button {
+            background-color: #ffffff;
+            color: #fe5b3d;
+
+border: 2px solid #ff4757;
+            padding: 13px 28px;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        .favorite-button:hover {
+            background-color:#0b5ed7;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .buttons-group {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .buttons-group .buy-button,
+        .buttons-group .favorite-button {
+            flex: 1;
+        }
+        html,body{
+            width: 100;
+            height: 100;
+            margin: 0;
+            padding: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="main">
+        <div class="product-container">
+            <div class="product-image-section">
+                <img src="../F9.jpg" alt="صورة المنتج">
+            </div>
+            <div class="product-details-section">
+                <div class="category"></div>
+                <h1 class="product-title">فيراري 488 بيستا سبايدر (Ferrari 488 Pista Spider).</h1>
+                <div class="product-price"> 350,000دولار</div>
+                <p class="product-description">  
+
+
+الاسم: <br>
+• فيراري 488 بيستا سبايدر (Ferrari 488 Pista Spider). <br>
+سنة الإصدار (للنموذج): <br>
+• تم الكشف عنها في عام 2018. <br>
+السعر (التقريبي): <br>
+• عند الإطلاق، كان السعر الأساسي للسيارة يبدأ حوالي 350,000 دولار أمريكي (وقد يرتفع بشكل كبير بناءً على الخيارات والإضافات وحالة السوق). <br>
+معلومات عنها: <br>
+• المحرك: محرك \text{V}8 سعة 3.9 لتر مزدوج التيربو. <br>
+• القوة: حوالي 710-720 حصان. <br>
+• التسارع من 0 إلى 100 كم/س (حوالي 0 إلى 62 ميل/س): حوالي 2.85 ثانية. <br>
+• السرعة القصوى: تزيد عن 340 كم/س. <br>
+• الوزن: أخف من طراز 488 سبايدر العادي بفضل استخدام مواد خفيفة الوزن في أجزاء مختلفة من السيارة. <br>
+• الأداء: هذه النسخة هي المكشوفة ذات الأداء الأعلى لسلسلة 488، وتستفيد من الخبرة المكتسبة في سباقات فيراري مثل \text{488 Challenge} و \text{488 GTE}. <br>
+ملاحظة: اللون في الصورة ليس أحمر فيراري الكلاسيكي (\text{Rosso Corsa})، بل يبدو وكأنه لون أبيض عاجي أو بيج فاتح مع خطوط سباق باللون العنابي/الأحمر الداكن، وهو مزيج شائع في سيارات فيراري الخاصة التي يطلبها العملاء ضمن برنامج "Tailor Made" أو خيارات الألوان المخصصة.
+
+
+                </p>
+                <div class="actions-container">
+                    <label for="quantity">الكمية:</label>
+                    <div class="quantity-selector">
+                        <input type="number" id="quantity" min="1" max="10" value="1" style="border: none;">
+                    </div>
+                    <div class="buttons-group">
+                        <a href="../signup.html" class="buy-button">Rent</a>
+                        <button class="favorite-button">Favorite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

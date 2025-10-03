@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .auth-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(230, 117, 52, 0.598);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .auth-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            direction: rtl;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #214974;
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+        }
+
+        .auth-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #fe5b3d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .auth-button:hover {
+            background-color:#214974;
+        }
+
+        .auth-link {
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #fe5b3d;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .auth-link:hover {
+            color: #0b5ed7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="auth-container">
+    <h1 class="auth-title">تسجيل الدخول</h1>
+    <form action="#" method="post">
+        <div class="input-group">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+        </div>
+        <div class="input-group">
+            <label for="password">كلمة المرور</label>
+            <input type="password" id="password" name="password" placeholder="أدخل كلمة المرور" required>
+        </div>
+        <a href="buy.html" class="auth-button">تسجيل الدخول</a>
+    </form>
+    <a href="signup.html" class="auth-link">ليس لديك حساب؟ قم بإنشاء حساب جديد</a>
+</div>
+
+</body>
+</html>

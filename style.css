@@ -1,0 +1,1106 @@
+/*=====================================
+  1. الخطوط والمتغيرات والتصفير الأساسي
+=====================================*/
+
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* المتغيرات الأساسية */
+:root {
+    --main-color: #fe5b3d; /* برتقالي محمر (أساسي) */
+    --second-color: #ffac38; /* برتقالي أصفر (ثانوي) */
+    --text-color: #333; /* نص داكن محسّن */
+    --light-text-color: #f8f8f8; /* لون ثانوي فاتح للنص */
+    --background-color: #f0f0f0; /* خلفية خفيفة (كانت bg-gray-50) */
+    --gradient: linear-gradient(90deg, var(--main-color) 0%, var(--second-color) 100%);
+
+    /* متغيرات لـ Sidebar/Search/Buttons */
+    --primary-color: #214974; /* لون أزرق داكن */
+    --secondary-color: #ffffff; /* لون ثانوي أبيض/فاتح */
+    --navbar-height: 70px; 
+    --sidebar-width: 280px; 
+    --transition-duration: 0.4s;
+}
+
+/* تصفير عام لجميع العناصر */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: var(--navbar-height);
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--background-color); 
+}
+
+/* Custom Scroll Bar */
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+/* تنسيق عام للأقسام */
+section {
+    padding: 40px 100px; 
+    background: var(--background-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/*=====================================
+  2. تنسيق شريط التنقل (Header)
+=====================================*/
+
+header {
+    position: sticky; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondary-color); 
+    padding: 0.5rem 3rem;
+    height: var(--navbar-height);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    transition: background 0.3s;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; 
+    /* تغيير ترتيب العناصر لـ RTL */
+    order: 1; 
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; 
+    /* تغيير ترتيب العناصر لـ RTL */
+    order: 3;
+}
+
+.search-bar {
+    order: 2; /* وضع شريط البحث في المنتصف */
+}
+
+.logo img {
+    width: 50px; 
+}
+
+.navbar {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.navbar .nav-link { 
+    font-size: 0.95rem;
+    padding: 8px 15px;
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--gradient);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: 0.4s ease-out;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    width: 100%;
+}
+
+.header-btn {
+    display: none; 
+    gap: 0.5rem;
+}
+
+.header-btn a {
+    padding: 8px 15px;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.header-btn .sign-up {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+.header-btn .sign-up:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.header-btn .sign-in {
+    background: var(--main-color);
+    color: #fff;
+    border: 2px solid var(--main-color);
+}
+
+.header-btn .sign-in:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* أيقونات التواصل الاجتماعي في الـ Header */
+.social-icons-desktop .social-icon {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin: 0 0.25rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons-desktop .facebook:hover {
+    color: #1877F2;
+}
+
+.social-icons-desktop .instagram:hover {
+    color: #E4405F;
+}
+
+/* زر القائمة الجانبية (Menu Icon Label) */
+.menu-icon-label {
+    cursor: pointer;
+    padding: 5px; 
+    border-radius: 8px; 
+    background-color: var(--main-color);
+    color: white;
+    transition: all var(--transition-duration);
+    line-height: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block; 
+    margin-left: 1rem; 
+}
+
+.menu-icon-label svg {
+    display: block;
+}
+
+.menu-icon-label:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/*=====================================
+  3. تنسيق شريط البحث (Search Bar)
+=====================================*/
+
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-form {
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+}
+
+.search-input {
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    width: 100%;
+    font-size: 0.9rem;
+    text-align: right;
+    background-color: var(--secondary-color);
+    transition: all 0.3s;
+    padding-left: 40px; 
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 3px rgba(254, 91, 61, 0.2);
+}
+
+/*=====================================
+  4. تنسيق سلايدر الصور التفاعلي (Interactive Image Slider)
+=====================================*/
+
+.carousel {
+    margin-top: 4rem;
+}
+
+.slides-container {
+    width: 95%;
+    overflow-x: auto;
+    margin: 1rem auto;
+    display: flex;
+    gap: 1rem;
+    scroll-behavior: smooth;
+    anchor-name: --slides-container;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after; /* السطر دا عليه إنذار انه غير معروف لكنه شغال وبيظهر زراير التنقل اللي تحت */
+}
+
+.slides-container::scroll-marker-group {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.slide::scroll-marker {
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.slide::scroll-marker:target-current {
+    background-color: var(--main-color);
+}
+
+.slides-container::-webkit-scrollbar {
+    display: none;
+}
+
+.slides-container::scroll-button(right), .slides-container::scroll-button(left) {
+    content: '→';
+    border: none;
+    background-color: var(--main-color);
+    font-size: 1.3rem;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: .1rem;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --slides-container;
+    position-area: right center;
+    translate: -50%;
+}
+
+.slides-container::scroll-button(left) {
+    content: '←';
+    position-area: left center;
+    translate: 50%;
+}
+
+.slides-container::scroll-button(right):disabled, .slides-container::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.slide {
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+    height: 24rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    align-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-overlay {
+    padding: auto 8rem;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    color: #333;
+    width: clamp(80%, 1000px, 70%);
+    height: 70%;
+    text-align: center;
+    align-content: center;
+}
+
+.content-overlay h2 {
+    margin-top: 0;
+    font-size: 2.5rem;
+}
+
+.content-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* صور الخلفية للشرائح */
+.slide:nth-child(1) { background-image: url('./s1.webp'); }
+.slide:nth-child(2) { background-image: url('./10s.jpg'); }
+.slide:nth-child(3) { background-image: url('./s2.jpg'); }
+.slide:nth-child(4) { background-image: url('./s3.jpg'); }
+.slide:nth-child(5) { background-image: url('./s4.jpg'); }
+.slide:nth-child(6) { background-image: url('./5s.jpg'); }
+.slide:nth-child(7) { background-image: url('./35800.jpg'); }
+.slide:nth-child(8) { background-image: url('./7s.jpg'); }
+.slide:nth-child(9) { background-image: url('./8sjpg.jpg'); }
+.slide:nth-child(10) { background-image: url('./9s.jpg'); }
+
+/*=====================================
+  5. تنسيق القائمة الجانبية (Sidebar)
+=====================================*/
+
+.sidebar-checkbox {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    /* يبدأ من خارج الشاشة من اليمين */
+    right: calc(-1 * var(--sidebar-width)); 
+    width: var(--sidebar-width);
+    height: 100%;
+    background-color: var(--secondary-color);
+    padding: 0; /* تم إزالة الحشوة العامة، وستتم إضافتها داخل الأقسام */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    /* ✅ تحديث: تحسين الانتقال وإضافة الزاوية العلوية */
+    transition: right var(--transition-duration) ease;
+    border-bottom-left-radius: 15px; /* شكل عصري للأسفل */
+    overflow-y: auto; /* لضمان التمرير إذا كثرت الروابط */
+    z-index: 1001;
+}
+
+.sidebar-header {
+    /* ✅ تحديث: تحسين الهيدر */
+    position: sticky;
+    top: 0;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-bottom: 1px solid var(--background-color); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* ظل خفيف للثبات */
+    z-index: 10;
+}
+
+.sidebar-close-btn {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar-close-btn:hover {
+    color: var(--main-color);
+    background-color: var(--background-color);
+}
+
+.sidebar-title {
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    color: var(--primary-color); 
+}
+
+.sidebar-login-link {
+    color: var(--main-color); 
+    font-weight: 600; 
+    align-items: center;
+    transition: color 0.2s ease-in-out;
+    font-size: 0.9rem;
+   
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+}
+
+.sidebar-login-link:hover {
+    color: var(--secondary-color); 
+    background-color: var(--main-color);
+}
+
+.sidebar-login-link .login-icon {
+    margin-left: 0.5rem; 
+}
+
+.sidebar-menu {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.sidebar-menu a {
+    /* ✅ تحديث: تنسيق الروابط */
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all var(--transition-duration);
+    border-right: 5px solid transparent; /* شريط جانبي للاختيار */
+}
+
+.sidebar-menu a:hover {
+    /* تأثير تمرير مميز */
+    background-color: var(--background-color); 
+    color:  #ffac38;
+    border-right-color: var(--main-color); 
+    padding-right: 25px; /* إزاحة بسيطة عند التمرير */
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 80;
+    pointer-events: none;
+    transition: background-color var(--transition-duration);
+}
+
+/* منطق فتح القائمة الجانبية بالـ CSS */
+.sidebar-checkbox:checked~.sidebar {
+    right: 0;
+}
+
+.sidebar-checkbox:checked~.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    pointer-events: auto;
+}/*=====================================
+  6. تنسيق بطاقات المنتجات (Grid)
+=====================================*/
+/* CSS Variables for colors */
+:root {
+     --main-color: #fe5b3d; /* برتقالي محمر (أساسي) */
+    --second-color: #ffac38; /* برتقالي أصفر (ثانوي) */
+    --text-color: #333; /* نص داكن محسّن */
+    --light-text-color: #f8f8f8; /* لون ثانوي فاتح للنص */
+    --background-color: #f0f0f0; /* خلفية خفيفة (كانت bg-gray-50) */
+    --gradient: linear-gradient(90deg, var(--main-color) 0%, var(--second-color) 100%);
+
+    --card-height: 400px; /* Fixed height for consistent flip */
+}
+
+/* Base styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7fa;
+    color: var(--text-color);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 30px;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* 1. The product card becomes the 3D space parent and the rotator */
+.product-card {
+    position: relative;
+    height: var(--card-height); /* Set fixed height for flip consistency */
+    background-color: var(--secondary-color); /* Revert to white background */
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    /* Set transition for rotation and box shadow */
+    transition: transform 0.8s ease, box-shadow 0.3s ease; 
+    
+    /* 3D setup */
+    perspective: 1000px; 
+    transform-style: preserve-3d; 
+    border: 1px solid #eee;
+}
+
+/* Flip the entire card on hover */
+.product-card:hover {
+    transform: rotateY(180deg);
+    box-shadow: 0 15px 30px rgba(254, 91, 61, 0.2);
+}
+
+/* 2. img-container (Front Face) and details below it */
+.img-container {
+    /* Must be absolute now to cover the top of the card and occupy 3D space */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden; /* Hide when rotated */
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    z-index: 2; /* Ensure it stays on top */
+    /* Use transform to make sure it's positioned correctly in 3D space */
+    transform: translateZ(0); 
+}
+
+.product-img {
+    width: 100%;
+    height: 100%; /* تم التعديل: الصورة تملأ 100% من ارتفاع الـ img-container */
+    object-fit: cover;
+    transition: none;
+    transform: scale(1);
+    border-radius: 15px; /* تم التعديل: الصورة تملأ الكارت كاملاً، لذا تأخذ حدود مستديرة كاملة */
+}
+
+/* Ensure the image content remains visible on the front face */
+.product-card:not(:hover) .product-img {
+    display: block;
+}
+
+/* The rest of the front-face content (if any, like text below the image) 
+   must be included in the HTML structure under img-container or product-details
+   depending on how you structure the two faces. 
+   Assuming now the basic details are the back face, and the image is the front face.
+*/
+
+
+/* 3. product-details (Back Face) */
+.product-details {
+    /* Must be absolute now to cover the top of the card and occupy 3D space */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cover the whole card area */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start;  Removed for consistency with original classes */
+    gap: 8px;
+    text-align: right;
+    
+    /* 3D Flip properties for the back face */
+    backface-visibility: hidden;
+    transform: rotateY(180deg); /* Start rotated away from the viewer */
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    justify-content: space-between; /* Pushes the button to the bottom */
+}
+
+
+.product-details .year {
+    background-color: var(--second-color);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.product-details .car-model {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 0;
+    width: 100%; /* Ensure full width alignment */
+}
+
+.product-details .price {
+    font-size: 1.3rem;
+    color: var(--main-color);
+    font-weight: 700;
+    margin-bottom: 5px;
+    width: 100%; /* Ensure full width alignment */
+}
+
+.product-details .price span {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.product-details .rating {
+    color: var(--main-color);
+    font-size: 1.1rem;
+    width: 100%; /* Ensure full width alignment */
+    margin-bottom: 10px;
+}
+
+.booking-btn { 
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: var(--gradient);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    transition: opacity 0.3s, transform 0.3s;
+    margin-top: auto; /* Pushes the button to the bottom within the flex container */
+    text-decoration: none; /* Add this if using an anchor tag */
+}
+
+.booking-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.01);
+}
+
+/*=====================================
+  7. تنسيقات التذييل (Footer)
+=====================================*/
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 40px 100px 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--second-color);
+    border-bottom: 2px solid var(--second-color);
+    padding-bottom: 5px;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-section ul a {
+    color: var(--light-text-color);
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.footer-section ul a:hover {
+    color: var(--main-color);
+}
+
+.footer-section.contact p i {
+    margin-left: 0.5rem; 
+}
+
+.social-icons-footer a {
+    font-size: 1.4rem;
+    color: var(--light-text-color);
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.social-icons-footer a:hover {
+    color: var(--main-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+}
+/*=====================================
+   Generic Page & Form Styles
+=====================================*/
+.main-content {
+    padding: 60px 20px;
+    min-height: calc(100vh - var(--navbar-height) - 250px);
+    /* Adjust based on footer height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-container,
+.auth-container {
+    background-color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+.auth-container {
+    max-width: 500px;
+    text-align: center;
+}
+
+.page-title,
+.auth-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 3px rgba(254, 91, 61, 0.2);
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1.1rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--main-color);
+}
+
+.btn-primary:hover {
+    background-color: #e44a2b;
+    transform: translateY(-2px);
+}
+
+ /*FAQ Page Styles (help)
+=====================================*/
+.faq-item {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+    list-style: none;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question::before {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--main-color);
+    transition: transform 0.3s;
+}
+
+.faq-item[open]>.faq-question::before {
+    content: '−';
+}
+
+.faq-answer {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    padding: 15px 15px 0 0;
+}
+
+.contact-link {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+.contact-link a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.contact-link a:hover {
+    text-decoration: underline;
+}
+/*=====================================
+  Checkout Page Styles (buy)
+=====================================*/
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+@media (min-width: 992px) {
+    .checkout-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.cart-details-section,
+.checkout-form-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    flex: 1;
+}
+
+.checkout-form-section {
+    flex-basis: 60%;
+}
+
+.cart-details-section {
+    flex-basis: 40%;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0 0 5px;
+}
+
+.item-details {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+}
+
+.item-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    min-width: 80px;
+    text-align: left;
+}
+
+.summary-details {
+    margin-top: 20px;
+    border-top: 2px solid #eee;
+    padding-top: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.total-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+
+/*=====================================
+  8. تنسيقات الجوال (Responsive Design)
+=====================================*/
+
+/* إظهار أزرار التسجيل/الاشتراك على الشاشات المتوسطة والكبيرة */
+@media (min-width: 768px) {
+    .header-btn {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 992px) {
+    header {
+        padding: 0.5rem 20px;
+    }
+    section {
+        padding: 30px 40px;
+    }
+    .footer {
+        padding: 30px 40px 15px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* تعديلات عامة للجوال */
+    section {
+        padding: 20px; 
+    }
+
+    header {
+        padding: 8px 15px; 
+        display: flex; 
+        justify-content: space-between;
+    }
+    
+    .header-left {
+        /* إتاحة مساحة أكبر لإظهار أيقونة القائمة */
+        gap: 0.5rem;
+        flex-grow: 1; 
+        justify-content: flex-start; /* دفع العناصر لليسار (بداية الـ RTL) */
+    }
+
+    /* إخفاء شريط التنقل القياسي وشريط البحث والأزرار */
+    .navbar, .search-bar, .header-btn, .social-icons-desktop {
+        display: none; 
+    }
+
+    /* تغيير الترتيب والهامش للأيقونة في وضع الجوال */
+    .header-left .menu-icon-label {
+        order: 1; /* الأيقونة أولاً */
+        margin-left: 0; /* إزالة الهامش الإضافي على الجوال */
+    }
+    .header-left .logo {
+        order: 2; /* الشعار ثانياً */
+    }
+    
+    .header-right {
+        gap: 0; 
+    }
+
+    /* تنسيق شبكة المنتجات */
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .content-overlay h2 {
+        font-size: 1.8rem;
+    }
+    
+    .content-overlay p {
+        font-size: 1rem;
+    }
+    
+    .footer-content {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}
+    
+    .footer {
+        padding: 20px 15px 10px;
+    }

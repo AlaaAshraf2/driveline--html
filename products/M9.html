@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+       
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: row;
+            background-color: #ffffff;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .product-image-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        .product-image-section img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .product-details-section {
+            flex: 1;
+            padding: 30px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-details-section .category {
+            font-size: 14px;
+            color: #777;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .product-details-section .product-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .product-details-section .product-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #214974;
+            margin-bottom: 20px;
+        }
+
+        .product-details-section .product-description {
+            font-size: 18px;
+            height: 300px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom:20px outo;
+            padding: 15px;
+            width: 100;
+            border: 2px solid #ccc;
+            overflow-y: scroll;
+            box-sizing: border-box;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(230, 117, 52, 0.598);
+
+        }
+        .product-details-section .product-description::-webkit-scrollbar{
+            width: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-track{
+            background:#f1f1f1;
+            border-radius: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-thumb{
+            background-color: #fe5b3d;
+            border-radius: 10p;
+            border: 2px solid #f1f1f1;
+
+        }
+        .actions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            padding: 5px;
+            width: fit-content;
+        }
+
+        .quantity-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 5px 10px;
+            color: #555;
+            transition: color 0.2s;
+        }
+
+        .quantity-button:hover {
+            color: #214974;
+        }
+
+        .quantity-display {
+            font-size: 18px;
+            padding: 0 10px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .buy-button,
+        .favorite-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #fe5b3d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: large;
+            font-family: 'Cairo', sans-serif;
+           text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
+        .favorite-button {
+            background-color: #ffffff;
+            color: #fe5b3d;
+
+border: 2px solid #ff4757;
+            padding: 13px 28px;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        .favorite-button:hover {
+            background-color:#0b5ed7;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .buttons-group {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .buttons-group .buy-button,
+        .buttons-group .favorite-button {
+            flex: 1;
+        }
+        html,body{
+            width: 100;
+            height: 100;
+            margin: 0;
+            padding: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="main">
+        <div class="product-container">
+            <div class="product-image-section">
+                <img src="../M9.jpg" alt="صورة المنتج">
+            </div>
+            <div class="product-details-section">
+                <div class="category"></div>
+                <h1 class="product-title">Mitsubishi Lancer Evolution X</h1>
+                <div class="product-price"> 40,000دولار</div>
+                <p class="product-description">
+
+الاسم: Mitsubishi Lancer Evolution X (ميتسوبيشي لانسر إيفوليوشن X). يُشار إليها أحيانًا اختصارًا بـ Evo X. <br>
+سنة الإصدار: بدأ إنتاج الجيل العاشر في اليابان عام 2007، وتم طرحه في الأسواق العالمية بدءًا من عام 2008. استمر إنتاجها حتى عام 2016 كنسخة "الوداع" (Final Edition). <br>
+المعلومات والمواصفات: <br>
+• التصنيف: سيارة رياضية مدمجة عالية الأداء (Sport Compact Sedan) ذات تراث عريق في سباقات الراليات. <br>
+• المحرك: مزودة بمحرك جديد (في ذلك الوقت) رباعي الأسطوانات سعة 2.0 لتر مع شاحن توربيني (Turbocharged I4) يحمل الكود 4B11T. <br>
+• القوة الحصانية والعزم: تتراوح القوة الحصانية في معظم إصدارات السوق الأمريكية واليابانية حول 291 حصانًا، وعزم دوران يبلغ حوالي 407 نيوتن متر (300 رطل قدم). بعض الإصدارات الخاصة في أسواق أخرى مثل المملكة المتحدة (إصدارات FQ) وصلت قوتها إلى أكثر من 400 حصان. <br>
+• ناقل الحركة (الجير): <br>
+• ناقل حركة يدوي 5 سرعات (5-Speed Manual). <br>
+• ناقل حركة TC-SST (Twin Clutch Sport Shift Transmission) وهو جير أوتوماتيكي مزدوج القابض بـ 6 سرعات. <br>
+• نظام الدفع: تتميز بنظام الدفع الرباعي المستمر (All-Wheel Drive - AWD) المتقدم للغاية من ميتسوبيشي، والذي يشتمل على نظام التحكم النشط في الانحراف (AYC) وترس تفاضلي مركزي نشط (ACD) لتوزيع مثالي للقوة والثبات. <br>
+• الشهرة: الإيفو X مشهورة بأدائها القوي وثباتها الخارق على الطريق وفي المنعطفات، مما يجعلها سيارة مثالية لعشاق القيادة الرياضية والتعديلات.
+
+                </p>
+                <div class="actions-container">
+                    <label for="quantity">الكمية:</label>
+                    <div class="quantity-selector">
+                        <input type="number" id="quantity" min="1" max="10" value="1" style="border: none;">
+                    </div>
+                    <div class="buttons-group">
+                        <a href="../signup.html" class="buy-button">Rent</a>
+                        <button class="favorite-button">Favorite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

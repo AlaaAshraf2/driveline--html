@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+       
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: row;
+            background-color: #ffffff;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .product-image-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        .product-image-section img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .product-details-section {
+            flex: 1;
+            padding: 30px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-details-section .category {
+            font-size: 14px;
+            color: #777;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .product-details-section .product-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .product-details-section .product-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #214974;
+            margin-bottom: 20px;
+        }
+
+        .product-details-section .product-description {
+            font-size: 18px;
+            height: 300px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom:20px outo;
+            padding: 15px;
+            width: 100;
+            border: 2px solid #ccc;
+            overflow-y: scroll;
+            box-sizing: border-box;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(230, 117, 52, 0.598);
+
+        }
+        .product-details-section .product-description::-webkit-scrollbar{
+            width: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-track{
+            background:#f1f1f1;
+            border-radius: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-thumb{
+            background-color: #fe5b3d;
+            border-radius: 10p;
+            border: 2px solid #f1f1f1;
+
+        }
+        .actions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            padding: 5px;
+            width: fit-content;
+        }
+
+        .quantity-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 5px 10px;
+            color: #555;
+            transition: color 0.2s;
+        }
+
+        .quantity-button:hover {
+            color: #214974;
+        }
+
+        .quantity-display {
+            font-size: 18px;
+            padding: 0 10px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .buy-button,
+        .favorite-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #fe5b3d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: large;
+            font-family: 'Cairo', sans-serif;
+           text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
+        .favorite-button {
+            background-color: #ffffff;
+            color: #fe5b3d;
+
+border: 2px solid #ff4757;
+            padding: 13px 28px;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        .favorite-button:hover {
+            background-color:#0b5ed7;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .buttons-group {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .buttons-group .buy-button,
+        .buttons-group .favorite-button {
+            flex: 1;
+        }
+        html,body{
+            width: 100;
+            height: 100;
+            margin: 0;
+            padding: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="main">
+        <div class="product-container">
+            <div class="product-image-section">
+                <img src="../a6.jpg" alt="صورة المنتج">
+            </div>
+            <div class="product-details-section">
+                <div class="category"></div>
+                <h1 class="product-title">(Audi A1 Sportback)</h1>
+                <div class="product-price"> 35,000دولار</div>
+                <p class="product-description">
+تُصنَّف الأودي A1 كسيارة سوبر ميني فاخرة (Premium Supermini) أو هاتشباك صغيرة (Small Hatchback) ذات 5 أبواب، وتتميز بتصميمها الرياضي وتقنياتها المتقدمة وجودتها الداخلية الممتازة مقارنة بمنافسيها في فئتها. <br>          
+أهم الميزات والمواصفات: <br>
+• التصميم الخارجي: يتميز الجيل الثاني من A1 بتصميم أكثر قوة ورياضية، خاصة مع الشبك الأمامي الكبير سداسي الشكل (Singleframe) والخطوط الحادة، وجنوط العجلات التي تبدو ذات تصميم رياضي في الصورة. <br>                  
+• المقصورة الداخلية: كما يظهر في الصورة، تتميز المقصورة بالتكنولوجيا الحديثة، حيث تحتوي على شاشة تعمل باللمس لنظام المعلومات والترفيه، وتصميم عصري للوحة القيادة، وعجلة قيادة متعددة الوظائف رياضية (غالبًا ما تكون نسخة S line). <br>
+• المحركات: تتوفر A1 عادة بمجموعة من محركات البنزين التوربينية (TFSI) بثلاث أو أربع أسطوانات، وتتراوح قوتها من حوالي 95 حصانًا وصولًا إلى إصدارات أقوى قد تتجاوز 200 حصان في بعض الفئات الأعلى. <br>
+• منصة البناء: تُبنى على منصة MQB A0، وهي نفس المنصة التي تُستخدم في سيارات أخرى ضمن مجموعة فولكس فاجن مثل فولكس فاجن بولو وسيات إيبيزا، مما يضمن قيادة جيدة ورحابة نسبية في فئتها. <br>
+• الأبعاد: زاد طول الجيل الثاني بشكل ملحوظ ليصبح حوالي 4.03 متر، مما يوفر مساحة أفضل للركاب وحجم صندوق أمتعة أكبر نسبيًا لفئتها (حوالي 335 لترًا). <br>
+سعر وسنة الإصدار <br>
+سنة الإصدار: <br>
+السيارة في الصورة هي من الجيل الثاني، الذي تم إطلاقه في عام 2019، وهو الجيل الحالي المتوفر في الأسواق (حتى تاريخ المعرفة الحالي أكتوبر 2025).
+السعر: <br>
+من الصعب تحديد سعر دقيق للسيارة المعروضة في الصورة لأسباب عديدة: <br>
+1. السيارة "مستعملة معتمدة": وجود ملصق "Audi Approved" يشير إلى أنها سيارة مستعملة معتمدة من الوكيل، وبالتالي يختلف سعرها حسب سنة صنعها الفعلية، عدد الكيلومترات المقطوعة، حالتها، ومواصفاتها الإضافية. <br>
+2. اختلاف الأسعار حسب البلد والعملة: أسعار السيارات تختلف بشكل كبير من دولة لأخرى (مصر، السعودية، الإمارات، أوروبا، إلخ) بسبب الضرائب والجمارك وأسعار صرف العملات. <br>
+لإعطائك فكرة عامة، يتراوح سعر أودي A1 الجديدة في بعض الأسواق العربية والأسواق العالمية التي ورد ذكرها في نتائج البحث (بتاريخ 2024/2025) حول: <br>
+• في مصر: متوسط سعر السوق لبعض فئاتها يمكن أن يكون حوالي 1,760,000 جنيه مصري أو أكثر (قد يختلف حسب التغيرات الاقتصادية الحالية). <br>
+• في السعودية: قد يبدأ سعرها من حوالي 139,500 ريال سعودي تقريبًا لفئاتها الجديدة.
+</p>
+                <div class="actions-container">
+                    <label for="quantity">الكمية:</label>
+                    <div class="quantity-selector">
+                        <input type="number" id="quantity" min="1" max="10" value="1" style="border: none;">
+                    </div>
+                    <div class="buttons-group">
+                        <a href="../signup.html" class="buy-button">Rent</a>
+                        <button class="favorite-button">Favorite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

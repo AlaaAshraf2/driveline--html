@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+       
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: row;
+            background-color: #ffffff;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .product-image-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        .product-image-section img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .product-details-section {
+            flex: 1;
+            padding: 30px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-details-section .category {
+            font-size: 14px;
+            color: #777;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .product-details-section .product-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .product-details-section .product-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #214974;
+            margin-bottom: 20px;
+        }
+
+        .product-details-section .product-description {
+            font-size: 18px;
+            height: 300px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom:20px outo;
+            padding: 15px;
+            width: 100;
+            border: 2px solid #ccc;
+            overflow-y: scroll;
+            box-sizing: border-box;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(230, 117, 52, 0.598);
+
+        }
+        .product-details-section .product-description::-webkit-scrollbar{
+            width: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-track{
+            background:#f1f1f1;
+            border-radius: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-thumb{
+            background-color: #fe5b3d;
+            border-radius: 10p;
+            border: 2px solid #f1f1f1;
+
+        }
+        .actions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            padding: 5px;
+            width: fit-content;
+        }
+
+        .quantity-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 5px 10px;
+            color: #555;
+            transition: color 0.2s;
+        }
+
+        .quantity-button:hover {
+            color: #214974;
+        }
+
+        .quantity-display {
+            font-size: 18px;
+            padding: 0 10px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .buy-button,
+        .favorite-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #fe5b3d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: large;
+            font-family: 'Cairo', sans-serif;
+text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
+        .favorite-button {
+            background-color: #ffffff;
+            color: #fe5b3d;
+
+border: 2px solid #ff4757;
+            padding: 13px 28px;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        .favorite-button:hover {
+            background-color:#0b5ed7;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .buttons-group {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .buttons-group .buy-button,
+        .buttons-group .favorite-button {
+            flex: 1;
+        }
+        html,body{
+            width: 100;
+            height: 100;
+            margin: 0;
+            padding: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="main">
+        <div class="product-container">
+            <div class="product-image-section">
+                <img src="../7mer.jpg " alt="صورة المنتج">
+            </div>
+            <div class="product-details-section">
+                <div class="category"></div>
+                <h1 class="product-title">Mercedes-AMG G 63</h1>
+                <div class="product-price"> 183,000دولار</div>
+                <p class="product-description">
+1. النوع <br>
+• النوع: سيارة دفع رباعي (SUV) فاخرة عالية الأداء. <br>
+2. الأداء والمحركات <br>
+تعتبر G 63 قوة جبارة بفضل محركها المصنوع يدوياً من AMG: <br>
+• المحرك: محرك V8 مزدوج التوربو سعة 4.0 لتر، وهو محرك Handcrafted AMG. <br>
+• القوة الحصانية: يولد المحرك قوة هائلة تبلغ 577 حصاناً. <br>
+• عزم الدوران: يبلغ أقصى عزم دوران 850 نيوتن متر. <br>
+• ناقل الحركة: تستخدم ناقل حركة أوتوماتيكي سريع من AMG من 9 سرعات. <br>
+• التسارع: على الرغم من وزنها الكبير، تتسارع من الثبات إلى 100 كم/ساعة في حوالي 4.5 ثوانٍ فقط، مما يجعلها أسرع بكثير من معظم سيارات الدفع الرباعي. <br>
+3. قدرات الطرق الوعرة <br>
+على عكس العديد من سيارات الـ SUV الفاخرة، صُممت G 63 لتكون قادرة بامتياز على الطرق الوعرة: <br>
+• أقفال التروس التفاضلية (Diff Locks): الميزة الأبرز في G-Class هي وجود ثلاثة أقفال تروس تفاضلية قابلة للقفل بنسبة 100% (أمامية، وسطية، وخلفية)، مما يمنحها قدرة لا تُضاهى على التمسك بالأرض في ظروف الانزلاق القصوى. <br>
+• نظام التعليق: مزودة بنظام تعليق AMG RIDE CONTROL القابل للتكيف، والذي يوفر التوازن بين القيادة المريحة على الأسفلت والمرونة المطلوبة في ظروف القيادة الوعرة. <br>
+4. التصميم الداخلي والميزات البارزة <br>
+• التصميم الخارجي: تحتفظ بهيكلها الصندوقي الكلاسيكي الذي اشتهرت به، مع لمسات عصرية مثل مصابيح LED الدائرية والمميزة التي ظهرت في صورتك، وشبك AMG Panamericana العمودي. <br>
+• الصوت: تتميز بمخارج عادم جانبية تخرج من أسفل العتبات، وهو ما يمنحها صوتاً عميقاً ومميّزاً جداً لمحرك V8. <br>
+• المقصورة: تعتبر المقصورة قفزة نوعية في الفخامة، حيث تشتمل على مواد جلدية فاخرة، وتطعيمات من ألياف الكربون أو الخشب. <br>
+• التكنولوجيا: مزودة بشاشات ضخمة (للوحة العدادات والترفيه) مدمجة تحت لوح زجاجي واحد، وتعمل بنظام MBUX الترفيهي المتقدم. <br>
+                </p>
+
+                <div class="actions-container">
+                    <label for="quantity">الكمية:</label>
+                    <div class="quantity-selector">
+                        <input type="number" id="quantity" min="1" max="10" value="1" style="border: none;">
+                    </div>
+                    <div class="buttons-group">
+                        <a href="../signup.html" class="buy-button">Rent</a>
+                        <button class="favorite-button">Favorite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

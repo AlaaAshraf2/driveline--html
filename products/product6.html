@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+       
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: row;
+            background-color: #ffffff;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .product-image-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        .product-image-section img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .product-details-section {
+            flex: 1;
+            padding: 30px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-details-section .category {
+            font-size: 14px;
+            color: #777;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .product-details-section .product-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .product-details-section .product-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #214974;
+            margin-bottom: 20px;
+        }
+
+        .product-details-section .product-description {
+            font-size: 18px;
+            height: 300px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom:20px outo;
+            padding: 15px;
+            width: 100;
+            border: 2px solid #ccc;
+            overflow-y: scroll;
+            box-sizing: border-box;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(230, 117, 52, 0.598);
+
+        }
+        .product-details-section .product-description::-webkit-scrollbar{
+            width: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-track{
+            background:#f1f1f1;
+            border-radius: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-thumb{
+            background-color: #fe5b3d;
+            border-radius: 10p;
+            border: 2px solid #f1f1f1;
+
+        }
+        .actions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            padding: 5px;
+            width: fit-content;
+        }
+
+        .quantity-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 5px 10px;
+            color: #555;
+            transition: color 0.2s;
+        }
+
+        .quantity-button:hover {
+            color: #214974;
+        }
+
+        .quantity-display {
+            font-size: 18px;
+            padding: 0 10px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .buy-button,
+        .favorite-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #fe5b3d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: large;
+            font-family: 'Cairo', sans-serif;
+text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
+        .favorite-button {
+            background-color: #ffffff;
+            color: #fe5b3d;
+
+border: 2px solid #ff4757;
+            padding: 13px 28px;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        .favorite-button:hover {
+            background-color:#0b5ed7;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .buttons-group {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .buttons-group .buy-button,
+        .buttons-group .favorite-button {
+            flex: 1;
+        }
+        html,body{
+            width: 100;
+            height: 100;
+            margin: 0;
+            padding: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="main">
+        <div class="product-container">
+            <div class="product-image-section">
+                <img src="../8mer.jpg" alt="صورة المنتج">
+            </div>
+            <div class="product-details-section">
+                <div class="category"></div>
+                <h1 class="product-title">Mercedes-AMG GT 63 4-Door Coupe</h1>
+                <div class="product-price"> 158,000دولار</div>
+                <p class="product-description">
+1.النوع <br>
+• النوع: سيدان رياضية فاخرة بأربعة أبواب (تُصنف كـ "كوبيه بأربعة أبواب"). <br>
+2. الأداء والمحركات <br>
+تشتهر GT 63 4-Door Coupe بكونها صاروخاً على العجلات، خاصة في نسخة 63 S: <br>
+• المحرك (GT 63): محرك V8 مزدوج التوربو سعة 4.0 لتر يولد قوة تبلغ 577 حصاناً. <br>
+• عزم الدوران: يبلغ حوالي 800 نيوتن متر (590 رطل-قدم). <br>
+• التسارع (0-100 كم/س): في حوالي 3.3 ثانية فقط. <br>
+الأداء الأقصى (GT 63 S E Performance) <br>
+• نوع المحرك: نظام هجين إضافي (Plug-in Hybrid) يجمع بين محرك V8 ومحرك كهربائي. <br>
+• القوة الإجمالية: تصل إلى 831 حصاناً (في بعض الإصدارات الأحدث). <br>
+• التسارع (0-100 كم/س): أقل من 3.0 ثوانٍ (عادة حوالي 2.9 ثانية)، مما يجعلها من الأسرع في فئتها. <br>
+• ناقل الحركة: جميع الطرازات مزودة بناقل حركة AMG SPEEDSHIFT MCT 9G (أوتوماتيكي 9 سرعات). <br> 
+• نظام الدفع: دفع كلي قياسي AMG Performance 4MATIC+ لتوزيع مثالي للقوة على العجلات الأربعة. <br>
+3. التصميم الداخلي والتكنولوجيا <br>
+تمزج المقصورة بين الرفاهية الكاملة والأجواء الرياضية العالية: <br>
+• الشاشات: تتميز بشاشتي عرض كبيرتين مقاس 12.3 بوصة لكل منهما (واحدة للعدادات والأخرى لنظام الترفيه MBUX). <br>
+• المقاعد: تتوفر بخيار مقاعد بأربعة ركاب أو خمسة، مع مقاعد رياضية أمامية مريحة وداعمة للأداء. <br>
+• العملانية: على الرغم من خط السقف المائل، يوفر الباب الخلفي (الهاتشباك) وصولاً سهلاً إلى مساحة شحن كبيرة ومرنة. <br>
+• العناصر الرياضية: تشمل عجلة قيادة AMG الرياضية بجلد النابا، ولمسات من ألياف الكربون، وأزرار تحكم مخصصة لوضعيات القيادة على عجلة القيادة. <br>
+4. الميزات الخاصة <br>
+• الديناميكيات النشطة: تحتوي على نظام تعليق هوائي متكيف AMG RIDE CONTROL+ الذي يضبط صلابة السيارة تلقائياً حسب وضعية القيادة والظروف. <br>
+• الجناح النشط: يوجد جناح خلفي نشط يرتفع وينخفض تلقائياً لتحسين الديناميكيات الهوائية وزيادة قوة الضغط السفلية (Downforce) عند السرعات العالية <br>
+• نظام العادم: نظام عادم رياضي متغير من AMG يتيح للسائق تعديل صوت المحرك بين الهدوء النسبي والصوت العميق القوي.
+                </p>
+
+                <div class="actions-container">
+                    <label for="quantity">الكمية:</label>
+                    <div class="quantity-selector">
+                        <input type="number" id="quantity" min="1" max="10" value="1" style="border: none;">
+                    </div>
+                    <div class="buttons-group">
+                        <a href="../signup.html" class="buy-button">Rent</a>
+                        <button class="favorite-button">Favorite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

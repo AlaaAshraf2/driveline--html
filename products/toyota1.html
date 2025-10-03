@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+       
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: row;
+            background-color: #ffffff;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .product-image-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        .product-image-section img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .product-details-section {
+            flex: 1;
+            padding: 30px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-details-section .category {
+            font-size: 14px;
+            color: #777;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .product-details-section .product-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .product-details-section .product-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #214974;
+            margin-bottom: 20px;
+        }
+
+        .product-details-section .product-description {
+            font-size: 18px;
+            height: 300px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom:20px outo;
+            padding: 15px;
+            width: 100;
+            border: 2px solid #ccc;
+            overflow-y: scroll;
+            box-sizing: border-box;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(230, 117, 52, 0.598);
+
+        }
+        .product-details-section .product-description::-webkit-scrollbar{
+            width: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-track{
+            background:#f1f1f1;
+            border-radius: 10px;
+        }
+        .product-details-section .product-description::-webkit-scrollbar-thumb{
+            background-color: #fe5b3d;
+            border-radius: 10p;
+            border: 2px solid #f1f1f1;
+
+        }
+        .actions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            padding: 5px;
+            width: fit-content;
+        }
+
+        .quantity-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 5px 10px;
+            color: #555;
+            transition: color 0.2s;
+        }
+
+        .quantity-button:hover {
+            color: #214974;
+        }
+
+        .quantity-display {
+            font-size: 18px;
+            padding: 0 10px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .buy-button,
+        .favorite-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #fe5b3d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: large;
+            font-family: 'Cairo', sans-serif;
+           text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
+        .favorite-button {
+            background-color: #ffffff;
+            color: #fe5b3d;
+
+border: 2px solid #ff4757;
+            padding: 13px 28px;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        .favorite-button:hover {
+            background-color:#0b5ed7;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .buttons-group {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .buttons-group .buy-button,
+        .buttons-group .favorite-button {
+            flex: 1;
+        }
+        html,body{
+            width: 100;
+            height: 100;
+            margin: 0;
+            padding: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="main">
+        <div class="product-container">
+            <div class="product-image-section">
+                <img src="../t7.jpg" alt="صورة المنتج">
+            </div>
+            <div class="product-details-section">
+                <div class="category"></div>
+                <h1 class="product-title">(Toyota Tundra)</h1>
+                <div class="product-price"> 74,000دولار</div>
+                <p class="product-description">
+المركبة في الصورة هي على الأرجح تويوتا تندرا (Toyota Tundra). ويبدو أنها مجهزة بتعديلات وإكسسوارات للطرق الوعرة (Off-Road Mods)، مثل: <br>
+• رفع التعليق (Lift Kit): مما يمنحها ارتفاعًا إضافيًا عن الأرض. <br>
+• إطارات كبيرة مخصصة للطرق الوعرة (Aggressive Off-Road Tires): لزيادة الثبات والقدرة على الجر في التضاريس الصعبة. <br>
+• عجلات (جنوط) مخصصة (Aftermarket Wheels). <br>
+• مصابيح إضافية (Auxiliary Lights): في الشبك الأمامي وأعلى الكابينة. <br>
+• مصد أمامي مخصص (Aftermarket Bumper): يتضمن رافعة (Winch) لعمليات السحب والإنقاذ. <br>
+• اللون: يبدو أنه لون أزرق داكن أو كحلي (قد يكون "Blue Crush Metallic" أو "Blueprint" حسب تسميات تويوتا). <br>
+المحرك والمواصفات الأساسية <br>
+لجيل تويوتا تندرا (2022 وما بعده)، تشمل المواصفات الأساسية ما يلي: <br>
+• المحرك: لم تعد تتوفر بمحرك V8. بدلاً من ذلك، تأتي بخيارين من محركات i-FORCE V6 ثنائية التيربو (Twin-Turbo V6): <br>
+• محرك i-FORCE: يولد قوة تصل إلى 389 حصانًا وعزم دوران 479 رطل-قدم (479 lb-ft). <br>
+• محرك i-FORCE MAX الهجين: يجمع بين محرك V6 ثنائي التيربو ومحرك كهربائي، ليولد قوة تصل إلى 437 حصانًا وعزم دوران هائل يبلغ 583 رطل-قدم (583 lb-ft). <br>
+• ناقل الحركة: أوتوماتيكي بـ 10 سرعات. <br>
+• القدرة على السحب (Max Towing): يمكن أن تصل إلى حوالي 12,000 رطل (حوالي 5443 كجم) للطرازات الأساسية. <br>
+• نظام التعليق الخلفي: تم استبدال نوابض الأوراق التقليدية بنظام تعليق خلفي متعدد الوصلات (Multi-Link Rear Suspension) مع نوابض لولبية لتحسين الراحة والأداء على الطرق المعبدة والوعرة.
+</p>
+                <div class="actions-container">
+                    <label for="quantity">الكمية:</label>
+                    <div class="quantity-selector">
+                        <input type="number" id="quantity" min="1" max="10" value="1" style="border: none;">
+                    </div>
+                    <div class="buttons-group">
+                        <a href="../signup.html" class="buy-button">Rent</a>
+                        <button class="favorite-button">Favorite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
